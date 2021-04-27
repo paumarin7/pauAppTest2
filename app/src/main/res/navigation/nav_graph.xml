@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/register">
+
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.example.readbooks.BookListFragment"
+        android:label="BookListFragment"
+        tools:layout="@layout/book_list_fragment">
+        <action
+            android:id="@+id/action_bookListFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <action
+            android:id="@+id/action_bookListFragment_to_newBookFragment"
+            app:destination="@id/newBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="com.example.readbooks.BookFragment"
+        android:label="BookFragment"
+        tools:layout="@layout/book_fragment">
+        <action
+            android:id="@+id/action_bookFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBookFragment"
+        android:name="com.example.readbooks.NewBookFragment"
+        android:label="NewBookFragment"
+        tools:layout="@layout/new_book_fragment"
+        >
+        <action
+            android:id="@+id/action_newBookFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.readbooks.Login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.readbooks.Register"
+        android:label="Register" >
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment android:id="@+id/placeholder2" >
+        <action
+            android:id="@+id/action_placeholder2_to_register"
+            app:destination="@id/register" />
+    </fragment>
+</navigation>

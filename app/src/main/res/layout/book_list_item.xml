@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/book_list_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/imageBook"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:paddingBottom="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookName"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_toRightOf="@id/imageBook"
+        android:layout_marginBottom="15dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/authorName"
+        android:textSize="17dp"
+       android:layout_toRightOf="@id/imageBook"
+        android:layout_below="@id/bookName"
+        android:layout_marginBottom="15dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/fr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E5FFFC"
+        android:layout_toRightOf="@id/imageBook"
+        android:layout_below="@id/authorName"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginBottom="15dp"
+        >
+    <Spinner
+        android:id="@+id/spinnerBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        android:popupBackground="#DEFFFC"
+        android:spinnerMode="dropdown"
+        android:backgroundTintMode="multiply"
+        android:hapticFeedbackEnabled="true"
+        />
+    </FrameLayout>
+
+    <RatingBar
+        android:id="@+id/stars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:numStars="5"
+        android:isIndicator="false"
+        android:layout_toRightOf="@id/imageBook"
+        android:layout_below="@id/fr"
+        android:layout_marginLeft="-5dp"
+        />
+
+
+</RelativeLayout>

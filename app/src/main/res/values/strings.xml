@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">ReadBooks</string>
+    <string-array name="spinner">
+        <item>Quiero Leerlo</item>
+        <item>Leyendo</item>
+        <item>Leido</item>
+    </string-array>
+
+
+</resources>
